@@ -63,6 +63,13 @@ module.exports = {
     },
 
     plugins: [
+        // gets rid of Critical dependency: the request of a dependency is an expression warning
+        new webpack.ContextReplacementPlugin(
+            /angular(\\|\/)core(\\|\/)@angular/,
+            helpers.root('./app'),
+            {}
+        ),
+
         new webpack.optimize.UglifyJsPlugin({ // https://github.com/angular/angular/issues/10618
             mangle: {
                 keep_fnames: true
