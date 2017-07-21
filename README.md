@@ -12,3 +12,4 @@
 * npm install
 * npm start         <- development build
 * npm run build     <- production/aot build
+* npm run test      <- run unit tests

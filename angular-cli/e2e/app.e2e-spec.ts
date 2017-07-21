@@ -7,8 +7,8 @@ describe('ag-grid-cli App', () => {
     page = new AgGridCliPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display message saying "Simple ag-Grid Angular Example"', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Simple ag-Grid Angular Example');
   });
 });
